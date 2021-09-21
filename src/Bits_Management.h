@@ -6,9 +6,15 @@
 
 
 /*============================================================================*/
-void Set_Bit_Uint8( uint8_t* carrier, uint8_t bit);
-void Reset_Bit_Uint8( uint8_t* carrier, uint8_t bit);
-int Test_Bit_Uint8( uint8_t* carrier, uint8_t bit);
+static const uint8_t SET_MASK[8] =
+    { 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80 };
+
+static const uint8_t RESET_MASK[8] =
+    { 0xFE, 0xFD, 0xFB, 0xF7, 0xEF, 0xDF, 0xBF, 0x7F };
+
+#define Set_Bit_Uint8(carrier,bit)      (carrier |= SET_MASK[bit] )
+#define Reset_Bit_Uint8(carrier,bit)    (carrier &= RESET_MASK[bit] )
+#define Test_Bit_Uint8(carrier,bit)     ((carrier&SET_MASK[bit])?true:false)
 
 
 /*============================================================================*/

@@ -1,0 +1,11 @@
+@startuml
+
+!includeurl https://gist.githubusercontent.com/Arnaud-Bonneuil/c317a7a30bed7d64e2b5b1f558ac00cf/raw/sober.puml
+
+!includeurl https://raw.githubusercontent.com/HomeMadeBots/Bits_Management/main/doc/Bits_Management.puml
+
+!includeurl https://raw.githubusercontent.com/HomeMadeBots/Embedded_C_Framework/main/doc/Embedded_C_Framework.puml
+
+Bits_Management ..> Embedded_C_Framework
+
+@enduml

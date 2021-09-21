@@ -1,0 +1,8 @@
+@startuml
+
+package Bits_Management [
+  Gathers software elements allowing to manage
+  bits on carriers.
+]
+
+@enduml

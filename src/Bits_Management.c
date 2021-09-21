@@ -10,24 +10,6 @@ static const uint8_t RESET_MASK_BLOCK[8] =
     { 0x7F, 0xBF, 0xDF, 0xEF, 0xF7, 0xFB, 0xFD, 0xFE };
 
 
-
-/*============================================================================*/
-void Set_Bit_Uint8( uint8_t* carrier, uint8_t bit)
-{
-    (*carrier) |= SET_MASK[bit];
-}
-/*----------------------------------------------------------------------------*/
-void Reset_Bit_Uint8( uint8_t* carrier, uint8_t bit)
-{
-    (*carrier) &= RESET_MASK[bit];
-}
-/*----------------------------------------------------------------------------*/
-int Test_Bit_Uint8( uint8_t* carrier, uint8_t bit)
-{
-    return ((*carrier)&SET_MASK[bit])? 1 : 0;
-}
-
-
 /*============================================================================*/
 void Set_Bit_Block( uint8_t* block, uint8_t bit_index )
 {
